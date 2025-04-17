@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support Error Gone</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #2c3e50, #34495e);; 
+      color: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .container {
+      max-width: 500px;
+      width: 90%;
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      transition: opacity 0.4s;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+      text-align: left;
+      transition: opacity 0.4s;
+    }
+
+    .links a {
+      display: block;
+      margin: 1rem auto;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      background: #ff4c60;
+      transition: background 0.3s;
+      max-width: 300px;
+    }
+
+    .links a:hover {
+      background: #ff1e3c;
+    }
+
+    .lang-selector {
+      margin-bottom: 1.5rem;
+    }
+
+    select {
+      padding: 0.6rem 1rem;
+      font-size: 1rem;
+      border-radius: 10px;
+      background-color: #2c2c2c;
+      color: #fff;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .logo {
+      width: 100px;
+      margin: 0 auto 1.5rem;
+      display: block;
+      border-radius: 50%;
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Проверьте, что URL изображения доступен и работает -->
+    <img src="Logo.png" alt="ErrorGone Logo" class="logo">
+    <div class="lang-selector">
+      <select id="language" onchange="changeLanguage()">
+        <option value="en">🌐 English</option>
+        <option value="es">🇪🇸 Español</option>
+        <option value="fr">🇫🇷 Français</option>
+        <option value="de">🇩🇪 Deutsch</option>
+        <option value="it">🇮🇹 Italiano</option>
+        <option value="pt">🇵🇹 Português</option>
+        <option value="ru">🇷🇺 Русский</option>
+        <option value="uk">🇺🇦 Українська</option>
+        <option value="pl">🇵🇱 Polski</option>
+        <option value="zh">🇨🇳 中文</option>
+        <option value="ja">🇯🇵 日本語</option>
+        <option value="ko">🇰🇷 한국어</option>
+        <option value="tr">🇹🇷 Türkçe</option>
+        <option value="hi">🇮🇳 हिंदी</option>
+      </select>
+    </div>
+    <h1 id="title">Support Error Gone</h1>
+    <p id="description">
+      Hi! I'm an independent developer and the creator of the YouTube channel ErrorGone.
+      Your donation is my motivation to keep going and do even more!
+    </p>
+    <div class="links">
+      <a href="https://donatello.to/ErrorGone" target="_blank">Donatello</a>
+      <a href="https://ko-fi.com/errorgone" target="_blank">KO-FI</a>
+      <a href="https://www.paypal.com/donate/?hosted_button_id=XU46YGNKN89VL" target="_blank">PayPal</a>
+    </div>
+  </div>
+
+  <script>
+    const text = {
+      en: {
+        title: "Support Error Gone",
+        description: "Hi! I'm an independent developer and the creator of the YouTube channel ErrorGone. Your donation is my motivation to keep going and do even more!",
+      },
+      es: {
+        title: "Apoya a Error Gone",
+        description: "¡Hola! Soy un desarrollador independiente y creador del canal de YouTube ErrorGone. ¡Tu donación es mi motivación para seguir adelante y hacer aún más!",
+      },
+      fr: {
+        title: "Soutenez Error Gone",
+        description: "Salut ! Je suis un développeur indépendant et le créateur de la chaîne YouTube ErrorGone. Ta donation est ma motivation pour continuer et faire encore plus !",
+      },
+      de: {
+        title: "Unterstütze Error Gone",
+        description: "Hallo! Ich bin ein unabhängiger Entwickler und der Gründer des YouTube-Kanals ErrorGone. Deine Spende ist meine Motivation, weiterzumachen und noch mehr zu tun!",
+      },
+      it: {
+        title: "Supporta Error Gone",
+        description: "Ciao! Sono uno sviluppatore indipendente e il creatore del canale YouTube ErrorGone. La tua donazione è la mia motivazione per andare avanti e fare ancora di più!",
+      },
+      pt: {
+        title: "Apoie o Error Gone",
+        description: "Olá! Sou um desenvolvedor independente e criador do canal do YouTube ErrorGone. Sua doação é minha motivação para continuar e fazer ainda mais!",
+      },
+      ru: {
+        title: "Підтримайте Error Gone",
+        description: "Привіт! Я незалежний розробник і автор YouTube-каналу ErrorGone. Ваш донат — моя мотивація продовжувати і робити ще більше!",
+      },
+      uk: {
+        title: "Підтримайте Error Gone",
+        description: "Привіт! Я незалежний розробник і автор YouTube-каналу ErrorGone. Ваш донат — моя мотивація продовжувати і робити ще більше!",
+      },
+      pl: {
+        title: "Wspieraj Error Gone",
+        description: "Cześć! Jestem niezależnym deweloperem i twórcą kanału YouTube ErrorGone. Twoja darowizna to moja motywacja, aby kontynuować i robić jeszcze więcej!",
+      },
+      zh: {
+        title: "支持Error Gone",
+        description: "你好！我是一个独立开发者，也是YouTube频道ErrorGone的创作者。您的捐款是我继续前进并做更多事情的动力！",
+      },
+      ja: {
+        title: "Error Goneをサポートしてください",
+        description: "こんにちは！私は独立した開発者で、YouTubeチャンネルErrorGoneの作成者です。あなたの寄付は、私が続けてさらに多くを行うためのモチベーションです！",
+      },
+      ko: {
+        title: "Error Gone을 지원하세요",
+        description: "안녕하세요! 저는 독립 개발자이며 YouTube 채널 ErrorGone의 제작자입니다. 귀하의 기부는 제가 계속해서 더 많은 일을 할 수 있도록 하는 원동력입니다!",
+      },
+      tr: {
+        title: "Error Gone'u Destekle",
+        description: "Merhaba! Ben bağımsız bir geliştiriciyim ve YouTube kanalı ErrorGone'ın yaratıcısıyım. Bağışınız, devam etmem ve daha fazlasını yapmam için motivasyonumdur!",
+      },
+      hi: {
+        title: "Error Gone का समर्थन करें",
+        description: "नमस्ते! मैं एक स्वतंत्र डेवलपर हूं और YouTube चैनल ErrorGone का निर्माता हूं। आपकी दान मेरी प्रेरणा है जिससे मैं आगे बढ़ सकता हूं और और भी अधिक कर सकता हूं!",
+      },
+    };
+
+    function changeLanguage() {
+      const lang = document.getElementById("language").value;
+      const title = document.getElementById("title");
+      const desc = document.getElementById("description");
+
+      // Fade out before changing text
+      title.style.opacity = 0;
+      desc.style.opacity = 0;
+
+      setTimeout(() => {
+        title.innerText = text[lang].title;
+        desc.innerText = text[lang].description;
+        title.style.opacity = 1;
+        desc.style.opacity = 1;
+      }, 300);
+    }
+  </script>
+</body>
+</html>
